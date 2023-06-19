@@ -1,11 +1,11 @@
 #!/bin/bash
-# 
+#
 # A simple wrapper for running elixir nodes to ensure that nodes
 # are started with credentials sufficient to cluster and attach to
 # after they are running.
-# 
+#
 # Usage:
-# 
+#
 # node-start mix phoenix.server
 # or
 # node-start mix run —no-halt
@@ -15,7 +15,7 @@ set -e
 
 # establish the name and cookie (if available)
 name="${HOSTNAME//./-}@$(hostname -I)"
-cookie="${COOKIE:-nanobox}"
+cookie="${COOKIE:-microbox}"
 
 elixir \
   --name $name \

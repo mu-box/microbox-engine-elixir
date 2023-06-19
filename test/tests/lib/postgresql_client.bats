@@ -1,7 +1,7 @@
 # Test the runtime selection
 
 # source the Nos framework
-. /opt/nanobox/nos/common.sh
+. /opt/microbox/nos/common.sh
 
 # source the nos test helper
 . util/nos.sh
@@ -63,7 +63,7 @@ END
 
   cat > /tmp/code/boxfile.yml <<-END
 data.db:
-    image: nanobox/postgresql:9.5
+    image: mubox/postgresql:9.5
 END
 
   postgresql_version=$(postgresql_version)

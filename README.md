@@ -1,6 +1,6 @@
 # Elixir
 
-This is an Elixir engine used to launch Elixir apps on [Nanobox](http://nanobox.io).
+This is an Elixir engine used to launch Elixir apps on [Microbox](http://microbox.cloud).
 
 ## Usage
 To use the Elixir engine, specify `elixir` as your `engine` in your boxfile.yml.
@@ -25,7 +25,7 @@ When preparing your runtime, this engine compiles code by doing the following:
 This engine provides helper scripts to make managing your Elixir application easier.
 
 ### node-attach
-The `node-attach` helper facilitates connecting to an Elixir node that was started with `elixir-start`.
+The `node-attach` helper facilitates connecting to an Elixir node that was started with `node-start`.
 
 ```bash
 node-attach
@@ -41,7 +41,7 @@ node-start mix run —no-halt
 ```
 
 ## Configuration Options
-This engine exposes configuration options through the [boxfile.yml](http://docs.nanobox.io/boxfile/), a yaml config file used to provision and configure your app's infrastructure when using Nanobox. This engine makes the following options available.
+This engine exposes configuration options through the [boxfile.yml](https://docs.microbox.cloud/boxfile/), a yaml config file used to provision and configure your app's infrastructure when using Microbox. This engine makes the following options available.
 
 #### Overview of Boxfile Configuration Options
 ```yaml
@@ -101,4 +101,4 @@ run.config:
 ---
 
 ## Help & Support
-This is an Elixir engine provided by [Nanobox](http://nanobox.io). If you need help with this engine, you can reach out to us in the [Nanobox Slack channel](https://nanoboxio.slack.com) (access can be requested at [slack.nanoapp.io](http://slack.nanoapp.io)). If you are running into an issue with the engine, feel free to [create a new issue on this project](https://github.com/nanobox-io/nanobox-engine-elixir/issues/new).
+This is an Elixir engine provided by [Microbox](http://microbox.cloud). If you need help with this engine, you can reach out to us in the [Microbox Discord](https://discord.gg/MCDdHfy). If you are running into an issue with the engine, feel free to [create a new issue on this project](https://github.com/mu-box/microbox-engine-elixir/issues/new).

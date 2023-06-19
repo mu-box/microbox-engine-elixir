@@ -123,8 +123,8 @@ postgresql_version() {
   version=$(nos_validate \
     "$(nos_payload "config_postgresql_client_version")" \
     "string" "$(default_postgresql_version)")
-  
-  version=$(expr "${version}" : '\([0-9]*\.[0-9]*\)')  
+
+  version=$(expr "${version}" : '\([0-9]*\.[0-9]*\)')
   # we only need the condensed version
   echo "${version//[.-]/}"
 }
@@ -133,7 +133,7 @@ postgresql_version() {
 default_postgresql_version() {
   # try to detect the version if specified in the boxfile
   detected=$(detect_postgresql_version)
-  
+
   if [[ "$detected" = "" ]]; then
     # the default, fallback
     echo "9.6"
@@ -145,7 +145,7 @@ default_postgresql_version() {
 # try to determine the version automatically
 detect_postgresql_version() {
   cat $(nos_code_dir)/boxfile.yml \
-    | grep "nanobox/postgresql" \
+    | grep "mubox/postgresql" \
       | awk -F ":" '{print $3}' \
         | head -n 1
 }

@@ -5,7 +5,7 @@
 set -e
 
 # source the Nos framework
-. /opt/nanobox/nos/common.sh
+. /opt/microbox/nos/common.sh
 
 # initialize Nos with the original arguments
 nos_init "$@"
